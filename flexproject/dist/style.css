@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  padding: 10px 20px;
+  margin-bottom: 5px;
+}
+.navbar .menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10px;
+}
+.navbar .menu li {
+  background-color: #e6dede;
+  width: 100%;
+  text-align: center;
+}
+.navbar .menu li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  color: white;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.hero .hero-content {
+  background: url(Loptopcopy.jpg) center/cover;
+  flex: 4;
+  background-size: cover;
+}
+.hero .hero-content h1 {
+  font-size: 2.5rem;
+}
+.hero .hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.hero .hero-content button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.pricing .pricing-card {
+  color: black;
+  flex: 1 1;
+  background: #c7c4c4;
+  border: 1px solid #ddd;
+  text-align: center;
+  flex: 1 1 150px;
+}
+.pricing .pricing-card h2 {
+  font-size: 1.5rem;
+}
+.pricing .pricing-card p {
+  font-size: 1.2rem;
+}
+.pricing .pricing-card button {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.pricing .pricing-card button:hover {
+  background-color: #1b98eb;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.services .service-card {
+  background: #c7c4c4;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 250px;
+}
+.services .service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.services .service-card h3 {
+  font-size: 1.2rem;
+}
+.services .service-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 1042px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .services {
+    flex-direction: row;
+  }
+
+  .pricing-card,
+.service-card {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 486px) {
+  .navbar {
+    border: 1px #504f4f;
+    box-shadow: none;
+  }
+  .navbar .menu li a {
+    box-shadow: none;
+    border-width: 100vw;
+  }
+
+  .pricing {
+    width: 100%;
+  }
+}

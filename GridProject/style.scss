@@ -1,0 +1,185 @@
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #3b3939;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+header {
+  color: white;
+
+  .navigation {
+    margin: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+
+    div {
+      background-color: $primary-color;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+
+  .hero-content {
+    background-image: url(Loptop.jpg);
+    text-align: center;
+  background-size: cover;
+    
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: $secondary-color;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+        filter: drop-shadow(0 0 10px red);
+      }
+    }
+  }
+
+  .membership-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    .membership {
+      background-color: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+
+      p {
+        font-size: 1.2rem;
+        color: $primary-color;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+      }
+
+      button{
+      
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken(rgb(1, 243, 1), 10%);
+        filter: drop-shadow(0 0 10px red);
+
+        }
+      }
+    }
+  }
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+
+  .service-card {
+    background-color: white;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+
+    i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header{
+    .navigation{
+    grid-template-columns: 1fr;
+  }  
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    .membership-options {
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    grid-template-rows:1fr;
+  }
+
+  .membership-options {
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 786px) {
+  .navigation {
+    grid-template-columns: repeat(4,1fr);
+
+    div {
+      padding: 7.5rem 0;
+    }
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+

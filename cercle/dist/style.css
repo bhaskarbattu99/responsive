@@ -1,0 +1,11 @@
+.cercle {
+  width: 5rem;
+  height: 5rem;
+  background-color: #02fb02;
+  border-radius: 170rem;
+  margin-left: 37rem;
+}
+
+.h1 {
+  text-align: center;
+}

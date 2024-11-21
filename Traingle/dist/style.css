@@ -1,0 +1,15 @@
+.traingle {
+  top: 10rem;
+  left: 10rem;
+  width: 0rem;
+  height: 0rem;
+  border-bottom: 10rem solid #02fe02;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  margin-left: 35rem;
+}
+
+.h1 {
+  text-align: center;
+  text-shadow: 2px 2px 5px #0202fe;
+}
